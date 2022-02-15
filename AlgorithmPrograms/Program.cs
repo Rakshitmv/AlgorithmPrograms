@@ -10,7 +10,7 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Algorithm Programs\n" + "Enter 1: Binary Search\n" + "Enter 2: Insertion Sort\n" + "Enter 3: Exit\n");
+            Console.WriteLine("Welcome to Algorithm Programs\n" + "Enter 1: Binary Search\n" + "Enter 2: Insertion Sort\n" + "Enter 3:Bubble Sort\n" + "Enter 4: Exit\n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -28,6 +28,12 @@ namespace AlgorithmPrograms
                     insertionSort.printArray(arr);
                     break;
                 case 3:
+                    BubbleSort bubbleSort = new BubbleSort();
+                    int[] array = { 20, 56, 89, 2, 32 };
+                    BubbleSort.BubbleSortInArray(array);
+                    BubbleSort.PrintArray(array);
+                    break;
+                case 4:
                     Console.WriteLine("Exit");
                     break;
                 default:
