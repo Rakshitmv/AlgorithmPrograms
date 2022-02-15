@@ -10,7 +10,7 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Algorithm Programs\n" + "Enter 1: Binary Search\n" + "Enter 2: Exit\n");
+            Console.WriteLine("Welcome to Algorithm Programs\n" + "Enter 1: Binary Search\n" + "Enter 2: Insertion Sort\n" + "Enter 3: Exit\n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -22,6 +22,12 @@ namespace AlgorithmPrograms
                     binarySearch.BinarySearchIterative(userInput);
                     break;
                 case 2:
+                    InsertionSort insertionSort = new InsertionSort();
+                    int[] arr = { 39, 65, 32, 1, 18, 78, 10 };
+                    insertionSort.Sort(arr);
+                    insertionSort.printArray(arr);
+                    break;
+                case 3:
                     Console.WriteLine("Exit");
                     break;
                 default:
