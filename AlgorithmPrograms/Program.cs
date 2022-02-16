@@ -11,7 +11,7 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Algorithm Programs\n" + "Enter 1: Binary Search\n" + "Enter 2: Insertion Sort\n" + "Enter 3:Bubble Sort\n" + "Enter 4: Merge Sort\n" + "Enter 5: Anagram  Detection\n"  + "Enter 6: Exit\n");
+            Console.WriteLine("Welcome to Algorithm Programs\n" + "Enter 1: Binary Search\n" + "Enter 2: Insertion Sort\n" + "Enter 3:Bubble Sort\n" + "Enter 4: Merge Sort\n" + "Enter 5: Anagram  Detection\n" + "Enter 6: Prime Number\n" + "Enter 7: Exit\n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -44,6 +44,10 @@ namespace AlgorithmPrograms
                     anagramDetection.Anagram();
                     break;
                 case 6:
+                    PrimeNumber primeNumber = new PrimeNumber();
+                    primeNumber.Prime();
+                    break;
+                case 7:
                     Console.WriteLine("Exit");
                     break;
                 default:
