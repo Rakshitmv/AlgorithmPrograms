@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Algorithm Programs\n" + "Enter 1: Binary Search\n" + "Enter 2: Insertion Sort\n" + "Enter 3:Bubble Sort\n" + "Enter 4: Merge Sort\n" + "Enter 5: Exit\n");
+            Console.WriteLine("Welcome to Algorithm Programs\n" + "Enter 1: Binary Search\n" + "Enter 2: Insertion Sort\n" + "Enter 3:Bubble Sort\n" + "Enter 4: Merge Sort\n" + "Enter 5: Anagram  Detection\n"  + "Enter 6: Exit\n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -39,6 +40,10 @@ namespace AlgorithmPrograms
                     MergeSort.PrintArray(array1);
                     break;
                 case 5:
+                    AnagramDetection anagramDetection = new AnagramDetection();
+                    anagramDetection.Anagram();
+                    break;
+                case 6:
                     Console.WriteLine("Exit");
                     break;
                 default:
@@ -48,5 +53,7 @@ namespace AlgorithmPrograms
             }
             Console.ReadLine();
         }
+
+        
     }
 }
